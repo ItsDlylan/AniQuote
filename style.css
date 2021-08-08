@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+body::before{
+    position: absolute;
+    content: "";
+    background-image: url("background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: .75;
+}
+
+.container{
+    position:relative;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#title{
+    margin-bottom: 30px;
+    font-size: 50px;
+    letter-spacing: 5px;
+    opacity: .6;
+}
+button{
+    width: 100px;
+    height: 30px;
+}
