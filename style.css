@@ -2,12 +2,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
+
 
 body{
     height: 100vh;
     width: 100vw;
     position: relative;
+    font-family: 'Gowun Dodum', sans-serif;
+
 }
 body::before{
     position: absolute;
@@ -35,10 +39,63 @@ body::before{
 #title{
     margin-bottom: 30px;
     font-size: 50px;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     opacity: .6;
 }
 button{
     width: 100px;
     height: 30px;
+}
+
+.quote{
+    width: 50%;
+    height: 30%;
+    padding: 25px;
+    position: relative;
+}
+
+blockquote{
+    position: relative;
+    font-size: 1.7rem;
+    padding: 1rem 1.2rem;
+    letter-spacing: 1px;
+}
+blockquote::before{
+    position: relative;
+    display:none;
+    color: #0b3448;
+    font-size: 48px;
+    content: "\"";
+    margin-right: -20px;
+    top: -15px;
+    right: 25px;
+}
+blockquote::after{
+    content: "\"";
+    display: none;
+    position: absolute;
+    color: #0b3448;
+    font-size: 48px;
+    left: 100%;
+    bottom: -15px;
+}
+blockquote::first-letter{
+    margin-left: 25px;
+}
+.characterName::before{
+    content: "-"; 
+    position:relative;
+    display:none;
+    width: 16px;
+    height: 15px;
+    margin-right: 10px;
+}
+.active::before,
+.active::after{
+    display:inline;
+}
+
+.anime--details{
+    display:flex;
+    justify-content: space-between;
 }
