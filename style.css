@@ -42,9 +42,18 @@ body::before{
     letter-spacing: 10px;
     opacity: .6;
 }
+
 button{
-    width: 100px;
+    width: 150px;
     height: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .4s ease-out;
+}
+button:hover{
+    box-shadow: 3px 3px 4px black;
+    transform: translate(3px,3px);
 }
 
 .quote{
