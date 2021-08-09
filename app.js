@@ -19,12 +19,19 @@ quoteBtn.addEventListener('click', function(){
         document.querySelector(DOMSTRINGS.animeName).classList.add('active')
         let quote2 = quote.quote;
         console.log(quote2.length);
+        if(quote.anime.length > 100){
+            document.querySelector(DOMSTRINGS.animeName).style.fontSize = '.95rem';
+        } else{
+            document.querySelector(DOMSTRINGS.animeName).style.fontSize = '1.17em';
+        }
         if(quote2.length > 150){
-            document.querySelector(DOMSTRINGS.quote).style.fontSize = '1.2rem';
+            document.querySelector(DOMSTRINGS.quote).style.fontSize = '1.5rem';
+            document.querySelector('.quote').style.width = '75%';
             document.querySelector(DOMSTRINGS.quote).textContent = quote2
             document.querySelector(DOMSTRINGS.quote).classList.add('active')
         } else{
             document.querySelector(DOMSTRINGS.quote).style.fontSize = '1.7rem';
+            document.querySelector('.quote').style.width = '50%';
             document.querySelector(DOMSTRINGS.quote).textContent = quote2
             document.querySelector(DOMSTRINGS.quote).classList.add('active')
         }
